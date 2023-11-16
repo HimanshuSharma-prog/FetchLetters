@@ -67,7 +67,7 @@ const radioArray=['0','1','2','3','4','5','6']
       <p>Select the radio button to display the letter cards</p>
       <div className='inputDiv'>
       {radioArray.map((elem)=>(
-        <RadioInput key={elem} id={elem} fetchLetter={fetchLetters} UpdateLetter={updateLetters} />
+        <RadioInput key={elem} id={elem} fetchLetter={fetchLetters} UpdateLetter={updateLetters}/>
       ))}
       </div>
       <div className='cardContainer'>
