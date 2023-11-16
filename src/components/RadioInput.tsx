@@ -1,15 +1,15 @@
 export type radioProps = {
     id: string;
-    fetchLetter: (id: string, status: string) => void
+    fetchLetter: (id: string, status: string) => void;
+    UpdateLetter: (id: string) => void;
 }
 
-const RadioInput = ({ id, fetchLetter }: radioProps) => {
+const RadioInput = ({ id, fetchLetter,UpdateLetter }: radioProps) => {
     return (
         <input type='radio' onChange={() => {
-            let fetch:string='new'
+            fetchLetter(id, 'new')
             setInterval(() => {
-                fetchLetter(id, fetch)
-                fetch=Math.random().toString()
+                UpdateLetter(id)
             }, 2000)
         }} />
     )

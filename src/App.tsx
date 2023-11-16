@@ -36,17 +36,30 @@ const radioArray=['0','1','2','3','4','5','6']
           letter:[leterData]
         }
         dispatch(addCard(cardData))
-      }else{
-        const updateData={
-          id:id,
-          letter:leterData
-        }
-        dispatch(UpdateCard(updateData))
       }
     }
     console.log(cardData)
     console.log(result)
   }
+
+  const updateLetters=async (id:string)=>{
+    const res=await fetch(`https://navirego-interview-mc3narrsb-volodymyr-matselyukh.vercel.app/api/letters/${id}`)
+    const result=await res.json()
+    const leterData:letters={
+      id:Math.random().toString(),
+      letter:result.letter
+    }
+    if(result.letter&&result.letter!==' '){
+      const updateData={
+        id:id,
+        letter:leterData
+      }
+      dispatch(UpdateCard(updateData))
+    }
+    console.log(cardData)
+    console.log(result)
+  }
+
 
   return (
     <div className='mainDiv'>
@@ -54,7 +67,7 @@ const radioArray=['0','1','2','3','4','5','6']
       <p>Select the radio button to display the letter cards</p>
       <div className='inputDiv'>
       {radioArray.map((elem)=>(
-        <RadioInput key={elem} id={elem} fetchLetter={fetchLetters} />
+        <RadioInput key={elem} id={elem} fetchLetter={fetchLetters} UpdateLetter={updateLetters} />
       ))}
       </div>
       <div className='cardContainer'>
