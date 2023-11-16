@@ -1,0 +1,70 @@
+.mainDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainDiv h1{
+  color: #FECE4F;
+  margin-top: 10px;
+}
+.mainDiv p{
+  margin: 10px;
+  color: #fff;
+  font-size: 20px;
+}
+.mainDiv .inputDiv{
+  margin: 20px;
+}
+.mainDiv .inputDiv input[type='radio']{
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  accent-color: #FECE4F;
+}
+.mainDiv .cardContainer{
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.mainDiv .cardContainer .card{
+  width: 250px;
+  /* max-height: 250px; */
+  background: #1C2021;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  overflow: auto;
+}
+.mainDiv .cardContainer .card p{
+  font-size: 16px;
+  color: #FECE4F;
+  margin: 0;
+}
+.mainDiv .cardContainer .card .letterDiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid #383838;
+}
+.mainDiv .cardContainer .card .letterDiv .letters{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #282828;
+  border-radius: 5px;
+  margin: 2px;
+}
+.mainDiv .cardContainer .card .letterDiv .letters p{
+  font-size: 24px;
+}
