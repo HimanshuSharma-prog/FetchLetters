@@ -1,3 +1,9 @@
+# Fetch Letters
+
+[Check it here](https://fetch-letters.vercel.app/)
+
+This app is created for fetch the letters from an api and disply them on a card and after every 2 second there will b a new letter is added
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
